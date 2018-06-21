@@ -24,24 +24,21 @@ STUDENT ID:1001545116</h1>
 <fieldset>
 <table border="1px">
 	<tr>
-        <th>time</th>
-		<th>latitude</th>
-		<th>longitude</th>
-		<th>depth</th>
-		<th>mag</th>
-		<th>magType</th>
-		<th>nst</th>
-		<th>gap</th>
-		<th>dmin</th>
-		<th>rms</th>
-		<th>id</th>
-		<th>place</th>
-		<th>depthError</th>
-		<th>magError</th>
-		<th>magNst</th>
-		<th>locationSource</th>
+        <th>pclass</th>
+		<th>survived</th>
+		<th>name</th>
+		<th>sex</th>
+		<th>sibsp</th>
+		<th>parch</th>
+		<th>ticket</th>
+		<th>fare</th>
+		<th>cabin</th>
+		<th>emabarked</th>
+		<th>boat</th>
+		<th>body</th>
+		<th>homedest</th>
 	</tr>
-	{% for row in msg %}
+	{% for row in temp %}
 	<tr>
 		<td>{{row[0]}}</td>
 		<td>{{row[1]}}</td>
@@ -57,8 +54,6 @@ STUDENT ID:1001545116</h1>
 		<td>{{row[11]}}</td>
 		<td>{{row[12]}}</td>
 		<td>{{row[13]}}</td>
-		<td>{{row[14]}}</td>
-		<td>{{row[15]}}</td>
 
 	</tr>
 	{% endfor %}
