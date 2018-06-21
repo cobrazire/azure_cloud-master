@@ -5,7 +5,7 @@ import io
 import csv
 app = Flask(__name__)
 con = sqlite3.connect('cloud.db')
-con.execute('CREATE TABLE if not exists equake(time VARCHAR(100),latitude DECIMAL,longitude DECIMAL,depth DECIMAL,mag DECIMAL,magType VARCHAR(100),nst SMALLINT,gap DECIMAL,dmin DECIMAL,rms DECIMAL,net VARCHAR(100),id VARCHAR(100),updated VARCHAR(100),place VARCHAR(100),type VARCHAR(100),horizontalError DECIMAL,depthError DECIMAL,magError DECIMAL,magNst SMALLINT,status VARCHAR(100),locationSource VARCHAR(100),magSource VARCHAR(100))')
+con.execute('CREATE TABLE if not exists equake(time VARCHAR(100),latitude DECIMAL,longitude DECIMAL,depth DECIMAL,mag DECIMAL,magType VARCHAR(100),nst SMALLINT,gap DECIMAL,dmin DECIMAL,rms DECIMAL,id VARCHAR(100),place VARCHAR(100),depthError DECIMAL,magError DECIMAL,magNst SMALLINT,locationSource VARCHAR(100))')
 @app.route('/')
 def my_form():
      return render_template('home.html')
@@ -26,7 +26,7 @@ def insert_table():
             try:
                 print("Inside try")
                 cur.execute(
-                    "INSERT INTO equake(time, latitude, longitude, depth, mag, magType, nst, gap, dmin, rms,net, id,updated, place,type,horizontalError, depthError, magError, magNst,status, locationSource,magSource) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",row)
+                    "INSERT INTO equake(time, latitude, longitude, depth, mag, magType, nst, gap, dmin, rms, id, place, depthError, magError, magNst, locationSource) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",row)
                 print(1)
                 con.commit()
                 msg = "Record successfully added"
