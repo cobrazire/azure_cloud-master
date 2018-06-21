@@ -1,0 +1,95 @@
+<html>
+<head>
+</head>
+<body>
+<fieldset>
+<h1>Hola! Welcome<br>
+MAYANK SHEKHAR ROY<br>
+STUDENT ID:1001545116</h1>
+</fieldset>
+
+<fieldset>
+<!--<form action="/" method="post" enctype="multipart/form-data">
+    <input type="submit" />
+</form>
+    -->
+    <h3>Display Records</h3>
+<form action="/getrecords" method="post" enctype="multipart/form-data">
+    <input type="submit" />
+</form>
+<!--
+<h3>Display Records</h3>
+<form action="/getrecords" method="post" enctype="multipart/form-data">
+    <input type="submit" />
+</form>
+</fieldset>
+-->
+<!--
+<fieldset>
+<table>
+	<tr>
+		<th>time</th>
+		<th>latitude</th>
+		<th>longitude</th>
+		<th>depth</th>
+		<th>mag</th>
+		<th>magType</th>
+		<th>nst</th>
+		<th>gap</th>
+		<th>dmin</th>
+		<th>rms</th>
+		<th>id</th>
+		<th>place</th>
+		<th>depthError</th>
+		<th>magError</th>
+		<th>magNst</th>
+		<th>locationSource</th>
+	</tr>
+	{% for row in results %}
+	<tr>
+		<td>{{row[0]}}</td>
+		<td>{{row[1]}}</td>
+		<td>{{row[2]}}</td>
+		<td>{{row[3]}}</td>
+		<td>{{row[4]}}</td>
+		<td>{{row[5]}}</td>
+		<td>{{row[6]}}</td>
+		<td>{{row[7]}}</td>
+		<td>{{row[8]}}</td>
+		<td>{{row[9]}}</td>
+		<td>{{row[10]}}</td>
+		<td>{{row[11]}}</td>
+		<td>{{row[12]}}</td>
+		<td>{{row[13]}}</td>
+		<td>{{row[14]}}</td>
+		<td>{{row[15]}}</td>
+	</tr>
+	{% endfor %}
+</table>
+</fieldset>
+<fieldset>
+<form method = "POST">
+enter magnitude here:	<input type="float" name="a"><br>
+enter lower magnitude here:	<input type="float" name="b">
+enter higher magnitude here: <input type="float" name="c"><br>
+enter starting date here:	<input type="text" name="d">
+enter ending date here:	<input type="text" name="e"><br>
+enter distance: <input type="number" name="f">
+enter destination: <input type="text" name="g"><br>
+enter starting depth: <input type="float" name="h">
+enter ending depth: <input type="float" name="i"><br>
+enter nst: <input type="float" name="j"><br>
+enter locationSource:<input type="text" name="k"><br>
+enter latitude:<input type="float" name="l">
+enter longitude:<input type="float" name="m">
+enter depth:<input type="float" name="n">
+
+
+	<input type="submit">
+</form>
+</fieldset>
+-->
+
+
+</body>
+</html>
