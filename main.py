@@ -15,7 +15,7 @@ def my_form():
 def insert_table():
     if request.method == 'POST':
         tem = sqlite3.connect('cloud.db')
-        cur = con.cursor()
+        cur = tem.cursor()
         f = request.files['data_file']
         if not f:
             return "No file"
@@ -40,28 +40,29 @@ def insert_table():
 # def get_records():
 #     if request.method == 'POST':
 #         tem = sqlite3.connect("cloud.db")
-#         cur = con.cursor()
+#         cur = tem.cursor()
 #         text2 = request.form['b']
 #         text3 = request.form['c']
 #         cur.execute('''SELECT COUNT(mag) from equake where (mag between ? and ?)''',(text2,text3,))
-#         rv = cur.fetchall()
-#         print(rv)
-#         return render_template("index.html", msg=rv)
+#         y = cur.fetchall()
+#         print(y)
+#         return render_template("index.html", trial=y)
 
 @app.route('/showrecords', methods=['POST', 'GET'])
 def get_records():
     if request.method == 'POST':
         tem = sqlite3.connect("cloud.db")
-        cur = con.cursor()
+        cur = tem.cursor()
         text4 = request.form['d']
         text5 = request.form['e']
-        cur.execute('''SELECT * from titanic where (age between ? and ?)''',(text4,text5,))
+        # cur.execute('''SELECT * from titanic where (age between ? and ?)''',(text4,text5,))
+        cur.execute('''select count(*) from titanic where sex='male' group by pclass''')
         x = cur.fetchall()
         print(x)
         return render_template("demo.html", temp=x)
 
-# def hello_world():
-#   return 'Hello, World!\n This looks just amazing within 5 minutes'
+def hello_world():
+  return 'Hello, World!\n This looks just amazing within 5 minutes'
 
 if __name__ == '__main__':
     app.debug=='true'
