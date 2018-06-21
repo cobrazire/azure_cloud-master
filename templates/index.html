@@ -24,7 +24,7 @@ STUDENT ID:1001545116</h1>
 </form>
 </fieldset>
 -->
-<!--
+
 <fieldset>
 <table>
 	<tr>
@@ -45,7 +45,7 @@ STUDENT ID:1001545116</h1>
 		<th>magNst</th>
 		<th>locationSource</th>
 	</tr>
-	{% for row in results %}
+	{% for row in msg %}
 	<tr>
 		<td>{{row[0]}}</td>
 		<td>{{row[1]}}</td>
@@ -67,7 +67,7 @@ STUDENT ID:1001545116</h1>
 	{% endfor %}
 </table>
 </fieldset>
-<fieldset>
+<!--<fieldset>
 <form method = "POST">
 enter magnitude here:	<input type="float" name="a"><br>
 enter lower magnitude here:	<input type="float" name="b">
@@ -88,8 +88,8 @@ enter depth:<input type="float" name="n">
 	<input type="submit">
 </form>
 </fieldset>
--->
 
+-->
 
 </body>
 </html>
