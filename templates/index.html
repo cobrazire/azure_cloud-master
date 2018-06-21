@@ -8,15 +8,11 @@ MAYANK SHEKHAR ROY<br>
 STUDENT ID:1001545116</h1>
 </fieldset>
 
-<fieldset>
+
 <!--<form action="/" method="post" enctype="multipart/form-data">
     <input type="submit" />
 </form>
     -->
-    <h3>Display Records</h3>
-<form action="/getrecords" method="post" enctype="multipart/form-data">
-    <input type="submit" />
-</form>
 <!--
 <h3>Display Records</h3>
 <form action="/getrecords" method="post" enctype="multipart/form-data">
@@ -28,7 +24,7 @@ STUDENT ID:1001545116</h1>
 <fieldset>
 <table>
 	<tr>
-		<th>time</th>
+        <th>time</th>
 		<th>latitude</th>
 		<th>longitude</th>
 		<th>depth</th>
@@ -38,12 +34,18 @@ STUDENT ID:1001545116</h1>
 		<th>gap</th>
 		<th>dmin</th>
 		<th>rms</th>
+		<th>net</th>
 		<th>id</th>
+        <th>updated</th>
 		<th>place</th>
+		<th>type</th>
+        <th>horizontal</th>
 		<th>depthError</th>
 		<th>magError</th>
 		<th>magNst</th>
+        <th>status</th>
 		<th>locationSource</th>
+        <th>magSource</th>
 	</tr>
 	{% for row in msg %}
 	<tr>
@@ -63,6 +65,13 @@ STUDENT ID:1001545116</h1>
 		<td>{{row[13]}}</td>
 		<td>{{row[14]}}</td>
 		<td>{{row[15]}}</td>
+		<td>{{row[16]}}</td>
+		<td>{{row[17]}}</td>
+		<td>{{row[18]}}</td>
+		<td>{{row[19]}}</td>
+		<td>{{row[20]}}</td>
+		<td>{{row[21]}}</td>
+
 	</tr>
 	{% endfor %}
 </table>
