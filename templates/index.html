@@ -8,7 +8,7 @@
 STUDENT ID:5116</h1>
 </fieldset>
 
-
+{{trial}}
 <!--<form action="/" method="post" enctype="multipart/form-data">
     <input type="submit" />
 </form>
@@ -20,7 +20,7 @@ STUDENT ID:5116</h1>
 </form>
 </fieldset>
 -->
-
+<!--
 <fieldset>
 <table border="1px">
 	<tr>
@@ -34,12 +34,18 @@ STUDENT ID:5116</h1>
 		<th>gap</th>
 		<th>dmin</th>
 		<th>rms</th>
+		<th>net</th>
 		<th>id</th>
+		<th>updated</th>
 		<th>place</th>
+		<th>type</th>
+		<th>horizontalError</th>
 		<th>depthError</th>
 		<th>magError</th>
 		<th>magNst</th>
+		<th>status</th>
 		<th>locationSource</th>
+		<th>magSource</th>
 	</tr>
 	{% for row in trial %}
 	<tr>
@@ -59,6 +65,12 @@ STUDENT ID:5116</h1>
 		<td>{{row[13]}}</td>
 		<td>{{row[14]}}</td>
 		<td>{{row[15]}}</td>
+		<td>{{row[16]}}</td>
+		<td>{{row[17]}}</td>
+		<td>{{row[18]}}</td>
+		<td>{{row[19]}}</td>
+		<td>{{row[20]}}</td>
+		<td>{{row[21]}}</td>
 
 	</tr>
 	{% endfor %}
