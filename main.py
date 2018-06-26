@@ -58,14 +58,14 @@ def get_records():
         cur = tem.cursor()
         text2 = request.form['b']
         text3 = request.form['c']
-        # cur.execute('''SELECT * from quake where (mag between ? and ?)''',(text2,text3,))
-        # y = cur.fetchall()
-        # print(y)
-        # r.set('Query3',y)
-        tempo=r.get('Query3')
-        print(tempo)
-        y=tempo
+        cur.execute('''SELECT mag from quake where (mag between ? and ?)''',(text2,text3,))
+        y = cur.fetchall()
         print(y)
+        r.set('Query4',y)
+        # tempo=r.get('Query4')
+        # print(tempo)
+        # y=tempo
+        # print(y)
         return render_template("index.html", trial=y)
 
 # @app.route('/showrecords', methods=['POST', 'GET'])
